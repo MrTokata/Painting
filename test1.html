@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 350px; height: 400px; background-color: coral; border-radius: 6px;
+            padding: 15px;
+        }
+        img{
+            width: 280px; height: 280px; border-radius: 50%;
+            background-color: cornflowerblue;
+        }
+        input{display: none;}
+        label{
+            padding: 10px 35px; border: 2px solid darkcyan; border-radius: 6px; color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Upload Image</center></h1>
+    <center>
+        <form action="">
+            <img alt="Painting">
+            <h3>Painting</h3>
+            <input type="file" name="file" id="file">
+            <label for="file">select File...</label>
+        </form>
+    </center>
+</body>
+<script>
+    const image = document.querySelector("img");
+        const input = document.querySelector("input");
+        input.addEventListener("change",(e)=>{
+            image.src = URL.createObjectURL(e.target.files[0]);
+        });
+</script>
+</html>
