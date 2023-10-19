@@ -1,0 +1,8 @@
+.fa-times-circle{
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+#create_new{
+    display: none;
+}
